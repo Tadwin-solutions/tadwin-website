@@ -23,19 +23,19 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-slate-200/80 bg-white/80 dark:border-slate-800 dark:bg-slate-950/80">
+    <footer className="border-t border-stone-200/80 bg-white/80 dark:border-stone-800 dark:bg-stone-950/80">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4 lg:col-span-2">
             <Link to={ROUTES.home} className="inline-flex items-center gap-2">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-fuchsia-600 text-sm font-bold text-white shadow-md">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-sm font-bold text-white shadow-md">
                 T
               </span>
-              <span className="text-lg font-semibold text-slate-900 dark:text-white">
+              <span className="text-lg font-semibold text-stone-900 dark:text-white">
                 {COMPANY.name}
               </span>
             </Link>
-            <p className="max-w-md text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+            <p className="max-w-md text-sm leading-relaxed text-stone-600 dark:text-stone-400">
               We partner with ambitious teams to design, build, and scale
               modern software—from first prototype to production-grade
               platforms.
@@ -47,7 +47,7 @@ export function Footer() {
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200/80 bg-slate-50 text-slate-600 transition hover:border-violet-300/80 hover:text-violet-700 dark:border-slate-700 dark:bg-slate-900/50 dark:text-slate-300 dark:hover:border-violet-500/40 dark:hover:text-violet-300"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-stone-200/80 bg-stone-50 text-stone-600 transition hover:border-sky-300/80 hover:text-blue-900 dark:border-stone-700 dark:bg-stone-900/50 dark:text-stone-300 dark:hover:border-indigo-600/45 dark:hover:text-sky-300"
                   aria-label={label}
                 >
                   <Icon />
@@ -57,7 +57,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-slate-900 dark:text-white">
+            <p className="text-sm font-semibold text-stone-900 dark:text-white">
               Explore
             </p>
             <ul className="mt-4 space-y-2">
@@ -65,7 +65,7 @@ export function Footer() {
                 <li key={to}>
                   <Link
                     to={to}
-                    className="text-sm text-slate-600 transition hover:text-violet-600 dark:text-slate-400 dark:hover:text-violet-400"
+                    className="text-sm text-stone-600 transition hover:text-blue-900 dark:text-stone-400 dark:hover:text-sky-400"
                   >
                     {label}
                   </Link>
@@ -75,14 +75,14 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-slate-900 dark:text-white">
+            <p className="text-sm font-semibold text-stone-900 dark:text-white">
               Contact
             </p>
-            <ul className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-400">
+            <ul className="mt-4 space-y-3 text-sm text-stone-600 dark:text-stone-400">
               <li>
                 <a
                   href={`mailto:${COMPANY.email}`}
-                  className="transition hover:text-violet-600 dark:hover:text-violet-400"
+                  className="transition hover:text-blue-900 dark:hover:text-sky-400"
                 >
                   {COMPANY.email}
                 </a>
@@ -90,7 +90,7 @@ export function Footer() {
               <li>
                 <a
                   href={`tel:${COMPANY.phone.replace(/\D/g, '')}`}
-                  className="transition hover:text-violet-600 dark:hover:text-violet-400"
+                  className="transition hover:text-blue-900 dark:hover:text-sky-400"
                 >
                   {COMPANY.phone}
                 </a>
@@ -100,11 +100,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-slate-200/80 pt-8 text-xs text-slate-500 dark:border-slate-800 dark:text-slate-500 sm:flex-row sm:items-center">
+        <div className="mt-12 flex flex-col items-start justify-between gap-4 border-t border-stone-200/80 pt-8 text-xs text-stone-500 dark:border-stone-800 dark:text-stone-500 sm:flex-row sm:items-center">
           <p>
             © {year} {COMPANY.name}. All rights reserved.
           </p>
-          <p className="text-slate-400 dark:text-slate-500">
+          <p className="text-stone-400 dark:text-stone-500">
             Crafted for clarity, speed, and long-term maintainability.
           </p>
         </div>

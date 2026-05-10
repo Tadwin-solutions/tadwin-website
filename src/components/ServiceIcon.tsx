@@ -35,7 +35,7 @@ export function ServiceIcon({ icon, className }: ServiceIconProps) {
   return (
     <span
       className={cn(
-        'inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/15 to-fuchsia-500/10 text-violet-600 ring-1 ring-violet-500/20 transition-transform duration-300 group-hover:scale-105 dark:from-violet-400/10 dark:to-fuchsia-400/10 dark:text-violet-300 dark:ring-violet-400/25',
+        'inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/15 to-indigo-900/10 text-blue-900 ring-1 ring-blue-700/25 transition-transform duration-300 group-hover:scale-105 dark:from-sky-500/12 dark:to-indigo-950/10 dark:text-sky-300 dark:ring-sky-600/30',
         className,
       )}
     >

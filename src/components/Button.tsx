@@ -3,15 +3,15 @@ import { cn } from '../utils/cn'
 
 /** Primary action control: use `to` for in-app navigation, `href` for external/mailto. */
 const base =
-  'inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-500 disabled:pointer-events-none disabled:opacity-50'
+  'inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 disabled:pointer-events-none disabled:opacity-50'
 
 const variants = {
   primary:
-    'bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white shadow-lg shadow-violet-500/25 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-violet-500/30 dark:shadow-glow',
+    'bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg shadow-blue-900/25 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-900/35 dark:shadow-glow',
   secondary:
-    'border border-slate-200/80 bg-white/80 text-slate-900 backdrop-blur-sm hover:border-violet-300/80 hover:bg-white dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-100 dark:hover:border-violet-500/40',
+    'border border-stone-200/80 bg-white/80 text-stone-900 backdrop-blur-sm hover:border-sky-300/80 hover:bg-white dark:border-stone-700 dark:bg-stone-900/60 dark:text-stone-100 dark:hover:border-indigo-600/45',
   ghost:
-    'text-slate-700 hover:bg-slate-100/90 dark:text-slate-200 dark:hover:bg-slate-800/80',
+    'text-stone-700 hover:bg-stone-100/90 dark:text-stone-200 dark:hover:bg-stone-800/80',
 } as const
 
 const sizes = {

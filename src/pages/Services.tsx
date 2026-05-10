@@ -55,17 +55,17 @@ export function Services() {
               >
                 <ServiceIcon icon={s.icon} />
                 <div className="space-y-3">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+                  <h3 className="text-lg font-semibold text-stone-900 dark:text-white">
                     {s.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                  <p className="text-sm leading-relaxed text-stone-600 dark:text-stone-400">
                     {s.description}
                   </p>
                   <div className="flex flex-wrap gap-2 pt-1">
                     {s.highlights.map((h) => (
                       <span
                         key={h}
-                        className="rounded-md border border-slate-200/90 bg-white/80 px-2 py-0.5 text-xs font-medium text-slate-700 dark:border-slate-700 dark:bg-slate-950/40 dark:text-slate-300"
+                        className="rounded-md border border-stone-200/90 bg-white/80 px-2 py-0.5 text-xs font-medium text-stone-700 dark:border-stone-700 dark:bg-stone-950/50 dark:text-stone-300"
                       >
                         {h}
                       </span>
@@ -78,7 +78,7 @@ export function Services() {
         </div>
       </SectionWrapper>
 
-      <TechStackSection className="bg-slate-50/80 dark:bg-slate-900/40" />
+      <TechStackSection className="bg-white/50 dark:bg-stone-900/30" />
 
       <SectionWrapper
         id="process"
@@ -89,14 +89,14 @@ export function Services() {
           {process.map((p, i) => (
             <ScrollReveal key={p.step} delayMs={i * 70}>
               <Card className="flex gap-4 transition-shadow duration-300 hover:shadow-lg">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-fuchsia-600 text-sm font-bold text-white">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-sm font-bold text-white">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <div>
-                  <h3 className="text-base font-semibold text-slate-900 dark:text-white">
+                  <h3 className="text-base font-semibold text-stone-900 dark:text-white">
                     {p.step}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                  <p className="mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-400">
                     {p.detail}
                   </p>
                 </div>
@@ -104,12 +104,12 @@ export function Services() {
             </ScrollReveal>
           ))}
         </div>
-        <div className="mt-12 rounded-2xl border border-violet-200/60 bg-white/80 p-8 text-center dark:border-violet-500/25 dark:bg-slate-900/50">
+        <div className="mt-12 rounded-2xl border border-blue-200/80 bg-white/80 p-8 text-center dark:border-sky-500/25 dark:bg-stone-900/60">
           <ScrollReveal>
-            <p className="text-lg font-semibold text-slate-900 dark:text-white">
+            <p className="text-lg font-semibold text-stone-900 dark:text-white">
               Not sure where to start?
             </p>
-            <p className="mx-auto mt-2 max-w-2xl text-sm text-slate-600 dark:text-slate-400">
+            <p className="mx-auto mt-2 max-w-2xl text-sm text-stone-600 dark:text-stone-400">
               Send a brief, a deck, or a backlog export. We’ll help you sequence
               the work and propose a sensible first engagement.
             </p>

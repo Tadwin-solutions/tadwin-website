@@ -26,20 +26,20 @@ export function TechStackSection({ id = 'tech-stack', className }: TechStackSect
               className="group relative h-full overflow-hidden pt-8"
             >
               <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-400 opacity-90 transition-opacity duration-300 group-hover:opacity-100"
+                className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 opacity-90 transition-opacity duration-300 group-hover:opacity-100"
                 aria-hidden
               />
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-900 dark:text-sky-400">
                 {group.label}
               </p>
               <ul className="mt-5 space-y-3">
                 {group.items.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 text-sm font-medium text-slate-800 dark:text-slate-100"
+                    className="flex items-start gap-2 text-sm font-medium text-stone-800 dark:text-stone-100"
                   >
                     <span
-                      className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500"
+                      className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600"
                       aria-hidden
                     />
                     <span>{item}</span>

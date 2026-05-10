@@ -33,20 +33,20 @@ export function WhyTadwinSection({
           >
             <Card
               interactive
-              className="group h-full border-slate-200/90 dark:border-slate-800"
+              className="group h-full border-stone-200/90 dark:border-stone-800"
             >
               <div className="flex gap-4">
                 <span
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-fuchsia-600 text-sm font-bold text-white shadow-md shadow-violet-500/20 transition-transform duration-300 group-hover:scale-105"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-sm font-bold text-white shadow-md shadow-blue-900/25 transition-transform duration-300 group-hover:scale-105"
                   aria-hidden
                 >
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <div>
-                  <h3 className="text-base font-semibold text-slate-900 dark:text-white">
+                  <h3 className="text-base font-semibold text-stone-900 dark:text-white">
                     {point.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                  <p className="mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-400">
                     {point.description}
                   </p>
                 </div>

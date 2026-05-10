@@ -22,13 +22,13 @@ export function Projects() {
           ))}
         </div>
 
-        <div className="mt-14 rounded-2xl border border-slate-200/80 bg-gradient-to-br from-slate-50 to-white p-8 dark:border-slate-800 dark:from-slate-900/50 dark:to-slate-950/30 md:p-10">
+        <div className="mt-14 rounded-2xl border border-stone-200/80 bg-gradient-to-br from-stone-50 to-white p-8 dark:border-stone-800 dark:from-stone-900/50 dark:to-stone-950/40 md:p-10">
           <ScrollReveal className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div>
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
+              <h3 className="text-xl font-semibold text-stone-900 dark:text-white">
                 Want a walkthrough under NDA?
               </h3>
-              <p className="mt-2 max-w-xl text-sm text-slate-600 dark:text-slate-400">
+              <p className="mt-2 max-w-xl text-sm text-stone-600 dark:text-stone-400">
                 We can share architecture diagrams, team topology, and lessons
                 learned from similar builds—especially for SaaS, ERP, and
                 mobile-heavy programs.

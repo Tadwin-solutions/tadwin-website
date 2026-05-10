@@ -37,7 +37,7 @@ export function About() {
       >
         <div className="mx-auto max-w-3xl text-center">
           <ScrollReveal>
-            <p className="text-base leading-relaxed text-slate-600 dark:text-slate-400">
+            <p className="text-base leading-relaxed text-stone-600 dark:text-stone-400">
               Our engagements range from greenfield builds to rescuing tricky
               legacy surfaces. What stays constant is a bias for transparent
               communication, measurable outcomes, and respectful collaboration
@@ -51,16 +51,16 @@ export function About() {
         id="principles"
         eyebrow="How we work"
         title="Principles you’ll feel in every sprint"
-        className="bg-slate-50/80 dark:bg-slate-900/40"
+        className="bg-white/60 dark:bg-stone-900/35"
       >
         <div className="grid gap-6 md:grid-cols-3">
           {principles.map((p, i) => (
             <ScrollReveal key={p.title} delayMs={i * 70}>
               <Card interactive className="h-full">
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+                <h3 className="text-lg font-semibold text-stone-900 dark:text-white">
                   {p.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                <p className="mt-3 text-sm leading-relaxed text-stone-600 dark:text-stone-400">
                   {p.body}
                 </p>
               </Card>
@@ -79,13 +79,13 @@ export function About() {
           {team.map((t, i) => (
             <ScrollReveal key={t.role} delayMs={i * 80}>
               <Card>
-                <p className="text-xs font-semibold uppercase tracking-wide text-violet-600 dark:text-violet-400">
+                <p className="text-xs font-semibold uppercase tracking-wide text-blue-900 dark:text-sky-400">
                   {t.role}
                 </p>
-                <p className="mt-3 text-lg font-semibold text-slate-900 dark:text-white">
+                <p className="mt-3 text-lg font-semibold text-stone-900 dark:text-white">
                   {t.name}
                 </p>
-                <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                <p className="mt-2 text-sm text-stone-600 dark:text-stone-400">
                   Embedded rituals: weekly demos, shared roadmap docs, and
                   async-friendly decision logs.
                 </p>

@@ -9,21 +9,21 @@ export function Navbar() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-white/70 shadow-sm backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-950/70">
+    <header className="sticky top-0 z-50 border-b border-stone-200/60 bg-white/75 shadow-sm backdrop-blur-xl dark:border-stone-800/80 dark:bg-stone-950/70">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           to={ROUTES.home}
           className="group flex items-center gap-2"
           onClick={() => setOpen(false)}
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-fuchsia-600 text-sm font-bold text-white shadow-md shadow-violet-500/25 transition-transform duration-200 group-hover:scale-105">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-sm font-bold text-white shadow-md shadow-blue-900/25 transition-transform duration-200 group-hover:scale-105">
             T
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="text-sm font-semibold text-slate-900 dark:text-white">
+            <span className="text-sm font-semibold text-stone-900 dark:text-white">
               {COMPANY.name}
             </span>
-            <span className="text-xs text-slate-500 dark:text-slate-400">
+            <span className="text-xs text-stone-500 dark:text-stone-400">
               {COMPANY.tagline}
             </span>
           </span>
@@ -39,9 +39,9 @@ export function Navbar() {
               to={to}
               className={({ isActive }) =>
                 cn(
-                  'rounded-lg px-3 py-2 text-sm font-medium text-slate-600 transition-colors hover:text-violet-600 dark:text-slate-300 dark:hover:text-violet-400',
+                  'rounded-lg px-3 py-2 text-sm font-medium text-stone-600 transition-colors hover:text-blue-900 dark:text-stone-300 dark:hover:text-sky-400',
                   isActive &&
-                    'bg-violet-500/10 text-violet-700 dark:text-violet-300',
+                    'bg-blue-900/10 text-blue-900 dark:text-sky-300',
                 )
               }
               end={to === ROUTES.home}
@@ -55,7 +55,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200/80 bg-white/80 text-slate-700 shadow-sm transition hover:border-violet-300/80 hover:text-violet-700 dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-200 dark:hover:border-violet-500/40 dark:hover:text-violet-300"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-stone-200/80 bg-white/80 text-stone-700 shadow-sm transition hover:border-sky-300/80 hover:text-blue-900 dark:border-stone-700 dark:bg-stone-900/60 dark:text-stone-200 dark:hover:border-indigo-600/45 dark:hover:text-sky-300"
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {theme === 'dark' ? (
@@ -67,14 +67,14 @@ export function Navbar() {
 
           <Link
             to={ROUTES.contact}
-            className="hidden rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-violet-500/25 transition hover:-translate-y-0.5 hover:shadow-xl md:inline-flex"
+            className="hidden rounded-xl bg-gradient-to-r from-blue-600 to-indigo-700 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-blue-900/25 transition hover:-translate-y-0.5 hover:shadow-xl md:inline-flex"
           >
             Let&apos;s talk
           </Link>
 
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200/80 bg-white/80 text-slate-800 md:hidden dark:border-slate-700 dark:bg-slate-900/60 dark:text-slate-100"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-stone-200/80 bg-white/80 text-stone-800 md:hidden dark:border-stone-700 dark:bg-stone-900/60 dark:text-stone-100"
             aria-expanded={open}
             aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
@@ -88,7 +88,7 @@ export function Navbar() {
       <div
         id="mobile-nav"
         className={cn(
-          'border-t border-slate-200/80 bg-white/95 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/95 md:hidden',
+          'border-t border-stone-200/80 bg-white/95 backdrop-blur-xl dark:border-stone-800 dark:bg-stone-950/95 md:hidden',
           open ? 'block' : 'hidden',
         )}
       >
@@ -100,8 +100,8 @@ export function Navbar() {
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 cn(
-                  'rounded-xl px-3 py-3 text-base font-medium text-slate-700 dark:text-slate-200',
-                  isActive && 'bg-violet-500/10 text-violet-700 dark:text-violet-300',
+                  'rounded-xl px-3 py-3 text-base font-medium text-stone-700 dark:text-stone-200',
+                  isActive && 'bg-blue-900/10 text-blue-900 dark:text-sky-300',
                 )
               }
               end={to === ROUTES.home}
@@ -112,7 +112,7 @@ export function Navbar() {
           <Link
             to={ROUTES.contact}
             onClick={() => setOpen(false)}
-            className="mt-2 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 px-3 py-3 text-center text-base font-semibold text-white"
+            className="mt-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-700 px-3 py-3 text-center text-base font-semibold text-white"
           >
             Let&apos;s talk
           </Link>

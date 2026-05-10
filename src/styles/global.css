@@ -2,17 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base layer: smooth scrolling + focus visibility for keyboard users */
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply min-h-screen bg-slate-50 text-slate-800 antialiased dark:bg-slate-950 dark:text-slate-100;
+    @apply min-h-screen antialiased;
+    background-color: theme('colors.stone.50');
+    color: theme('colors.stone.800');
+  }
+
+  html.dark body {
+    background-color: theme('colors.stone.950');
+    color: theme('colors.stone.100');
   }
 
   ::selection {
-    @apply bg-violet-500/25 text-slate-900 dark:text-white;
+    background-color: rgba(37, 99, 235, 0.2);
+    color: theme('colors.stone.900');
+  }
+
+  html.dark ::selection {
+    background-color: rgba(96, 165, 250, 0.25);
+    color: #ffffff;
   }
 }

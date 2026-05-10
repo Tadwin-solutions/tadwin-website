@@ -41,20 +41,20 @@ export function SectionWrapper({
             )}
           >
             {eyebrow && (
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-violet-600 dark:text-violet-400">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-900 dark:text-sky-400">
                 {eyebrow}
               </p>
             )}
             {title && (
               <h2
                 id={headingId}
-                className="text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl dark:text-white"
+                className="text-3xl font-semibold tracking-tight text-stone-900 md:text-4xl dark:text-white"
               >
                 {title}
               </h2>
             )}
             {subtitle && (
-              <p className="text-base leading-relaxed text-slate-600 md:text-lg dark:text-slate-400">
+              <p className="text-base leading-relaxed text-stone-600 md:text-lg dark:text-stone-400">
                 {subtitle}
               </p>
             )}

@@ -1,23 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.css',
+  ],
   theme: {
     extend: {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        glow: '0 0 80px -20px rgba(139, 92, 246, 0.45)',
-        card: '0 1px 2px rgba(15, 23, 42, 0.06), 0 24px 48px -24px rgba(15, 23, 42, 0.12)',
+        glow: '0 0 80px -20px rgba(37, 99, 235, 0.38)',
+        card: '0 1px 2px rgba(28, 25, 23, 0.06), 0 24px 48px -24px rgba(28, 25, 23, 0.1)',
         'card-dark':
           '0 1px 2px rgba(0, 0, 0, 0.2), 0 24px 48px -24px rgba(0, 0, 0, 0.45)',
       },
       backgroundImage: {
         'grid-slate':
-          'linear-gradient(to right, rgb(148 163 184 / 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgb(148 163 184 / 0.08) 1px, transparent 1px)',
+          'linear-gradient(to right, rgb(168 162 158 / 0.09) 1px, transparent 1px), linear-gradient(to bottom, rgb(168 162 158 / 0.09) 1px, transparent 1px)',
         'grid-slate-dark':
-          'linear-gradient(to right, rgb(148 163 184 / 0.06) 1px, transparent 1px), linear-gradient(to bottom, rgb(148 163 184 / 0.06) 1px, transparent 1px)',
+          'linear-gradient(to right, rgb(168 162 158 / 0.06) 1px, transparent 1px), linear-gradient(to bottom, rgb(168 162 158 / 0.06) 1px, transparent 1px)',
       },
       animation: {
         'float-slow': 'float 8s ease-in-out infinite',

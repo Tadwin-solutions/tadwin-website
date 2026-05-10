@@ -39,36 +39,36 @@ export function Contact() {
           <ScrollReveal>
             <Card className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+                <h3 className="text-lg font-semibold text-stone-900 dark:text-white">
                   Direct lines
                 </h3>
-                <ul className="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                <ul className="mt-4 space-y-3 text-sm text-stone-600 dark:text-stone-400">
                   <li>
-                    <span className="font-medium text-slate-800 dark:text-slate-200">
+                    <span className="font-medium text-stone-800 dark:text-stone-200">
                       Email
                     </span>
                     <br />
                     <a
                       href={`mailto:${COMPANY.email}`}
-                      className="text-violet-600 hover:underline dark:text-violet-400"
+                      className="text-blue-900 hover:underline dark:text-sky-400"
                     >
                       {COMPANY.email}
                     </a>
                   </li>
                   <li>
-                    <span className="font-medium text-slate-800 dark:text-slate-200">
+                    <span className="font-medium text-stone-800 dark:text-stone-200">
                       Phone
                     </span>
                     <br />
                     <a
                       href={`tel:${COMPANY.phone.replace(/\D/g, '')}`}
-                      className="text-violet-600 hover:underline dark:text-violet-400"
+                      className="text-blue-900 hover:underline dark:text-sky-400"
                     >
                       {COMPANY.phone}
                     </a>
                   </li>
                   <li>
-                    <span className="font-medium text-slate-800 dark:text-slate-200">
+                    <span className="font-medium text-stone-800 dark:text-stone-200">
                       Location
                     </span>
                     <br />
@@ -76,7 +76,7 @@ export function Contact() {
                   </li>
                 </ul>
               </div>
-              <p className="text-xs leading-relaxed text-slate-500 dark:text-slate-500">
+              <p className="text-xs leading-relaxed text-stone-500 dark:text-stone-500">
                 Prefer a calendar link? Mention your timezone in the message and
                 we&apos;ll coordinate a working session.
               </p>
@@ -92,19 +92,19 @@ export function Contact() {
               >
                 <div className="grid gap-5 sm:grid-cols-2">
                   <label className="block text-sm">
-                    <span className="font-medium text-slate-800 dark:text-slate-200">
+                    <span className="font-medium text-stone-800 dark:text-stone-200">
                       Name
                     </span>
                     <input
                       name="name"
                       required
                       autoComplete="name"
-                      className="mt-2 w-full rounded-xl border border-slate-200/90 bg-white/90 px-3 py-2.5 text-sm text-slate-900 shadow-sm outline-none ring-violet-500/30 transition placeholder:text-slate-400 focus:border-violet-400 focus:ring-2 dark:border-slate-700 dark:bg-slate-950/40 dark:text-white dark:placeholder:text-slate-500"
+                      className="mt-2 w-full rounded-xl border border-stone-200/90 bg-white/90 px-3 py-2.5 text-sm text-stone-900 shadow-sm outline-none ring-blue-600/20 transition placeholder:text-stone-400 focus:border-blue-600 focus:ring-2 dark:border-stone-700 dark:bg-stone-900/60 dark:text-white dark:placeholder:text-stone-500"
                       placeholder="Alex Rivera"
                     />
                   </label>
                   <label className="block text-sm">
-                    <span className="font-medium text-slate-800 dark:text-slate-200">
+                    <span className="font-medium text-stone-800 dark:text-stone-200">
                       Work email
                     </span>
                     <input
@@ -112,20 +112,20 @@ export function Contact() {
                       type="email"
                       required
                       autoComplete="email"
-                      className="mt-2 w-full rounded-xl border border-slate-200/90 bg-white/90 px-3 py-2.5 text-sm text-slate-900 shadow-sm outline-none ring-violet-500/30 transition placeholder:text-slate-400 focus:border-violet-400 focus:ring-2 dark:border-slate-700 dark:bg-slate-950/40 dark:text-white dark:placeholder:text-slate-500"
+                      className="mt-2 w-full rounded-xl border border-stone-200/90 bg-white/90 px-3 py-2.5 text-sm text-stone-900 shadow-sm outline-none ring-blue-600/20 transition placeholder:text-stone-400 focus:border-blue-600 focus:ring-2 dark:border-stone-700 dark:bg-stone-900/60 dark:text-white dark:placeholder:text-stone-500"
                       placeholder="you@company.com"
                     />
                   </label>
                 </div>
                 <label className="block text-sm">
-                  <span className="font-medium text-slate-800 dark:text-slate-200">
+                  <span className="font-medium text-stone-800 dark:text-stone-200">
                     Project details
                   </span>
                   <textarea
                     name="message"
                     required
                     rows={5}
-                    className="mt-2 w-full resize-y rounded-xl border border-slate-200/90 bg-white/90 px-3 py-2.5 text-sm text-slate-900 shadow-sm outline-none ring-violet-500/30 transition placeholder:text-slate-400 focus:border-violet-400 focus:ring-2 dark:border-slate-700 dark:bg-slate-950/40 dark:text-white dark:placeholder:text-slate-500"
+                    className="mt-2 w-full resize-y rounded-xl border border-stone-200/90 bg-white/90 px-3 py-2.5 text-sm text-stone-900 shadow-sm outline-none ring-blue-600/20 transition placeholder:text-stone-400 focus:border-blue-600 focus:ring-2 dark:border-stone-700 dark:bg-stone-900/60 dark:text-white dark:placeholder:text-stone-500"
                     placeholder="Goals, stack, timeline, links to briefs or Figma..."
                   />
                 </label>
@@ -134,13 +134,13 @@ export function Contact() {
                     Open email draft
                   </Button>
                   {submitted && (
-                    <p className="text-xs text-emerald-600 dark:text-emerald-400">
+                    <p className="text-xs text-blue-900 dark:text-sky-400">
                       If your mail client didn&apos;t open, email us directly at{' '}
                       {COMPANY.email}.
                     </p>
                   )}
                 </div>
-                <p className="text-xs text-slate-500 dark:text-slate-500">
+                <p className="text-xs text-stone-500 dark:text-stone-500">
                   By submitting, you agree to us storing your message for follow
                   up. We never sell contact data.
                 </p>
