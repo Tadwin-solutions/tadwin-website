@@ -172,8 +172,8 @@ export const PROJECTS: Project[] = [
 
 export const COMPANY = {
   name: 'Tadwin Solutions',
-  tagline: 'Software development agency',
-  email: 'hello@tadwinsolutions.com',
-  phone: '+1 (555) 010-4271',
-  address: 'Remote-first · Serving clients globally',
+  tagline: 'Software development company',
+  email: 'tadwinsolutions@gmail.com',
+  phone: '+971 543 692 694',
+  address: 'Dubai, UAE',
 } as const
