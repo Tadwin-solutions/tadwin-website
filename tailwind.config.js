@@ -25,7 +25,14 @@ export default {
       },
       animation: {
         'float-slow': 'float 8s ease-in-out infinite',
+        'float-slower': 'float 11s ease-in-out infinite',
         'pulse-soft': 'pulseSoft 4s ease-in-out infinite',
+        drift: 'drift 18s ease-in-out infinite',
+        'drift-reverse': 'drift 22s ease-in-out infinite reverse',
+        marquee: 'marquee 36s linear infinite',
+        shimmer: 'shimmer 2.8s ease-in-out infinite',
+        'bar-fill': 'barFill 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+        'gradient-shift': 'gradientShift 10s ease-in-out infinite',
       },
       keyframes: {
         float: {
@@ -35,6 +42,27 @@ export default {
         pulseSoft: {
           '0%, 100%': { opacity: '0.5' },
           '50%': { opacity: '0.85' },
+        },
+        drift: {
+          '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+          '33%': { transform: 'translate(10px, -14px) rotate(1deg)' },
+          '66%': { transform: 'translate(-8px, 8px) rotate(-1deg)' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        shimmer: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        barFill: {
+          '0%': { transform: 'scaleX(0)' },
+          '100%': { transform: 'scaleX(1)' },
+        },
+        gradientShift: {
+          '0%, 100%': { opacity: '0.55', transform: 'scale(1)' },
+          '50%': { opacity: '0.9', transform: 'scale(1.06)' },
         },
       },
     },

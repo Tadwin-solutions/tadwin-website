@@ -28,3 +28,19 @@
     color: #ffffff;
   }
 }
+
+@layer utilities {
+  .mask-fade-x {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+
+  .animate-pause-on-hover:hover {
+    animation-play-state: paused;
+  }
+}

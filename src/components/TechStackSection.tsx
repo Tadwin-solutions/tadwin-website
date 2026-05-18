@@ -1,3 +1,4 @@
+import { TechMarquee } from './animations/TechMarquee'
 import { Card } from './Card'
 import { ScrollReveal } from './ScrollReveal'
 import { SectionWrapper } from './SectionWrapper'
@@ -20,7 +21,7 @@ export function TechStackSection({ id = 'tech-stack', className }: TechStackSect
     >
       <div className="grid gap-6 md:grid-cols-3">
         {TECH_STACK.map((group, i) => (
-          <ScrollReveal key={group.label} delayMs={i * 90}>
+          <ScrollReveal key={group.label} delayMs={i * 90} variant="fade-scale">
             <Card
               interactive
               className="group relative h-full overflow-hidden pt-8"
@@ -50,6 +51,7 @@ export function TechStackSection({ id = 'tech-stack', className }: TechStackSect
           </ScrollReveal>
         ))}
       </div>
+      <TechMarquee className="mt-12 border-x-0" />
     </SectionWrapper>
   )
 }

@@ -1,25 +1,29 @@
 import { Link } from 'react-router-dom'
+import Darklogo from '../assets/images/logo-tadwin.png'
+import Lightlogo from '../assets/images/logo-tadwin-light.png'
 import { COMPANY, NAV_LINKS, ROUTES } from '../utils/constants'
+import { useTheme } from './ThemeProvider'
 
-const social = [
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com',
-    icon: LinkedInIcon,
-  },
-  {
-    label: 'X',
-    href: 'https://twitter.com',
-    icon: XIcon,
-  },
-  {
-    label: 'GitHub',
-    href: 'https://github.com',
-    icon: GitHubIcon,
-  },
-] as const
+// const social = [
+//   {
+//     label: 'LinkedIn',
+//     href: 'https://www.linkedin.com',
+//     icon: LinkedInIcon,
+//   },
+//   {
+//     label: 'X',
+//     href: 'https://twitter.com',
+//     icon: XIcon,
+//   },
+//   {
+//     label: 'GitHub',
+//     href: 'https://github.com',
+//     icon: GitHubIcon,
+//   },
+// ] as const
 
 export function Footer() {
+  const { theme } = useTheme()
   const year = new Date().getFullYear()
 
   return (
@@ -27,21 +31,23 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4 lg:col-span-2">
-            <Link to={ROUTES.home} className="inline-flex items-center gap-2">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-sm font-bold text-white shadow-md">
-                T
-              </span>
-              <span className="text-lg font-semibold text-stone-900 dark:text-white">
-                {COMPANY.name}
-              </span>
+            <Link
+              to={ROUTES.home}
+              className="inline-flex items-center transition-transform duration-300 hover:scale-[1.02] motion-reduce:hover:scale-100"
+            >
+              <img
+                src={theme === 'dark' ? Darklogo : Lightlogo}
+                alt={COMPANY.name}
+                className="object-contain w-[200px]"
+              />
             </Link>
             <p className="max-w-md text-sm leading-relaxed text-stone-600 dark:text-stone-400">
               We partner with ambitious teams to design, build, and scale
               modern software—from first prototype to production-grade
               platforms.
             </p>
-            <div className="flex flex-wrap gap-3">
-              {social.map(({ label, href, icon: Icon }) => (
+            {/* <div className="flex flex-wrap gap-3">
+              {social?.map(({ label, href, icon: Icon }) => (
                 <a
                   key={label}
                   href={href}
@@ -53,7 +59,7 @@ export function Footer() {
                   <Icon />
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           <div>

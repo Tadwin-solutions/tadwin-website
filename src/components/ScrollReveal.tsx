@@ -1,11 +1,32 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { cn } from '../utils/cn'
 
+type RevealVariant = 'fade-up' | 'fade-scale' | 'fade-blur'
+
 type ScrollRevealProps = {
   children: ReactNode
   className?: string
   /** Stagger sibling reveals (ms). */
   delayMs?: number
+  variant?: RevealVariant
+}
+
+const variantClasses: Record<
+  RevealVariant,
+  { hidden: string; visible: string }
+> = {
+  'fade-up': {
+    hidden: 'translate-y-6 opacity-0',
+    visible: 'translate-y-0 opacity-100',
+  },
+  'fade-scale': {
+    hidden: 'translate-y-4 scale-[0.97] opacity-0',
+    visible: 'translate-y-0 scale-100 opacity-100',
+  },
+  'fade-blur': {
+    hidden: 'translate-y-5 opacity-0 blur-sm',
+    visible: 'translate-y-0 opacity-100 blur-0',
+  },
 }
 
 /**
@@ -15,6 +36,7 @@ export function ScrollReveal({
   children,
   className,
   delayMs = 0,
+  variant = 'fade-up',
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
@@ -37,14 +59,15 @@ export function ScrollReveal({
     return () => observer.disconnect()
   }, [])
 
+  const motion = variantClasses[variant]
+
   return (
     <div
       ref={ref}
       className={cn(
-        'transform-gpu transition-all duration-700 ease-out motion-reduce:transform-none motion-reduce:opacity-100',
-        visible
-          ? 'translate-y-0 opacity-100'
-          : 'translate-y-6 opacity-0 motion-reduce:translate-y-0',
+        'transform-gpu transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transform-none motion-reduce:opacity-100 motion-reduce:blur-0',
+        visible ? motion.visible : motion.hidden,
+        !visible && 'motion-reduce:translate-y-0 motion-reduce:scale-100',
         className,
       )}
       style={{ transitionDelay: `${delayMs}ms` }}

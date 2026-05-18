@@ -25,6 +25,7 @@ export function WhyTadwinSection({
           <ScrollReveal
             key={point.title}
             delayMs={i * 70}
+            variant="fade-scale"
             className={
               i === WHY_TADWIN.length - 1
                 ? 'sm:col-span-2 lg:col-span-3 lg:mx-auto lg:max-w-3xl'

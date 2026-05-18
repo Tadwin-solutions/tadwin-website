@@ -3,6 +3,8 @@ import { Link, NavLink } from 'react-router-dom'
 import { COMPANY, NAV_LINKS, ROUTES } from '../utils/constants'
 import { cn } from '../utils/cn'
 import { useTheme } from './ThemeProvider'
+import Darklogo from '../assets/images/logo-tadwin.png'
+import Lightlogo from '../assets/images/logo-tadwin-light.png'
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
@@ -10,23 +12,17 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-stone-200/60 bg-white/75 shadow-sm backdrop-blur-xl dark:border-stone-800/80 dark:bg-stone-950/70">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           to={ROUTES.home}
-          className="group flex items-center gap-2"
+          className="group flex items-center gap-2 transition-transform duration-300 hover:scale-[1.02] motion-reduce:hover:scale-100"
           onClick={() => setOpen(false)}
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-sm font-bold text-white shadow-md shadow-blue-900/25 transition-transform duration-200 group-hover:scale-105">
-            T
-          </span>
-          <span className="flex flex-col leading-tight">
-            <span className="text-sm font-semibold text-stone-900 dark:text-white">
-              {COMPANY.name}
-            </span>
-            <span className="text-xs text-stone-500 dark:text-stone-400">
-              {COMPANY.tagline}
-            </span>
-          </span>
+          <img
+            src={theme === 'dark' ? Darklogo : Lightlogo}
+            alt={COMPANY.name}
+            className="h-32 w-auto object-contain md:h-44"
+          />
         </Link>
 
         <nav

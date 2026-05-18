@@ -35,6 +35,7 @@ export function SectionWrapper({
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {hasHeader && (
           <ScrollReveal
+            variant="fade-blur"
             className={cn(
               'mb-12 max-w-2xl space-y-3 md:mb-16',
               align === 'center' && 'mx-auto text-center',

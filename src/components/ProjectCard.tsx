@@ -1,4 +1,5 @@
 import type { Project } from '../utils/constants'
+import { MockScreenCard } from './animations/MockScreenCard'
 import { Card } from './Card'
 import { ScrollReveal } from './ScrollReveal'
 
@@ -10,14 +11,23 @@ type ProjectCardProps = {
 /** Agency-style portfolio tile with hero strip, meta, stack chips, and outcome. */
 export function ProjectCard({ project, delayMs = 0 }: ProjectCardProps) {
   return (
-    <ScrollReveal delayMs={delayMs}>
+    <ScrollReveal delayMs={delayMs} variant="fade-scale">
       <Card
         interactive
-        className="group flex h-full flex-col overflow-hidden p-0 transition-shadow duration-300 hover:shadow-xl"
+        className="group flex h-full flex-col overflow-hidden p-0 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl"
       >
-        <div className="relative h-32 overflow-hidden bg-gradient-to-br from-stone-900 via-blue-950 to-indigo-950 dark:from-stone-950 dark:via-blue-950 dark:to-indigo-950">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(255,255,255,0.2),transparent_55%)] opacity-80" />
-          <div className="pointer-events-none absolute -right-8 top-8 h-32 w-32 rounded-full bg-cyan-500/25 blur-2xl transition-all duration-500 group-hover:bg-cyan-400/35" />
+        <div className="relative h-36 overflow-hidden bg-gradient-to-br from-stone-900 via-blue-950 to-indigo-950 dark:from-stone-950 dark:via-blue-950 dark:to-indigo-950">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(255,255,255,0.2),transparent_55%)] opacity-80 motion-safe:animate-gradient-shift motion-reduce:animate-none" />
+          <div className="pointer-events-none absolute -right-8 top-8 h-32 w-32 rounded-full bg-cyan-500/25 blur-2xl transition-all duration-500 group-hover:scale-110 group-hover:bg-cyan-400/35" />
+          <MockScreenCard
+            variant="dashboard"
+            className="absolute left-4 top-4 w-[42%] scale-90 opacity-90 motion-safe:animate-drift motion-reduce:animate-none group-hover:opacity-100"
+          />
+          <MockScreenCard
+            variant="analytics"
+            className="absolute -right-2 bottom-3 w-[38%] scale-[0.85] opacity-80 motion-safe:animate-drift-reverse motion-reduce:animate-none group-hover:opacity-95"
+            style={{ animationDelay: '0.6s' }}
+          />
           <div className="relative flex h-full flex-col justify-end p-5">
             <div className="flex flex-wrap items-center gap-2">
               <span className="rounded-full bg-white/15 px-2.5 py-0.5 text-xs font-semibold text-white ring-1 ring-white/20 backdrop-blur-sm">
